@@ -49,13 +49,12 @@
   transform: scale(1);
 }
 
-/* Subtle color hint per player */
 .cell.x { background: linear-gradient(180deg, #fff8f2, #ffeede);}
 .cell.o { background: linear-gradient(180deg, #f2fbff, #e6f6ff);}
 
 /* Winning highlight */
 .cell.win{
-  outline: 3px solid #3b82f6; /* Tailwind "blue-500"-ish */
+  outline: 3px solid #3b82f6;
   animation: pulse .9s ease-in-out 2;
 }
 
@@ -64,7 +63,7 @@
   100%{ box-shadow: 0 0 0 16px rgba(59,130,246,0); }
 }
 
-/* Status bar tweaks */
+
 #statusBar{
   border-radius: 12px;
   box-shadow: var(--shadow);
