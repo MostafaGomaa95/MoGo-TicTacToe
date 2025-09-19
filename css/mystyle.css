@@ -1,0 +1,71 @@
+:root{
+  --cell-size: 120px;
+  --radius: 18px;
+  --shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.board{
+  display: grid;
+  grid-template-columns: repeat(3, var(--cell-size));
+  grid-template-rows: repeat(3, var(--cell-size));
+  gap: 12px;
+  width: max-content;
+}
+
+@media (max-width: 420px){
+  :root{ --cell-size: 92px; }
+}
+
+.cell{
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #ffffff, #f5f6f8);
+  border: 1px solid #e7e9ef;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease, background .2s ease;
+  user-select: none;
+}
+
+.cell:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(0,0,0,.09);
+}
+
+.cell i{
+  opacity: .0;
+  transform: scale(.8);
+  transition: opacity .12s ease, transform .12s ease;
+}
+
+.cell.filled{
+  cursor: default;
+}
+
+.cell.filled i{
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Subtle color hint per player */
+.cell.x { background: linear-gradient(180deg, #fff8f2, #ffeede);}
+.cell.o { background: linear-gradient(180deg, #f2fbff, #e6f6ff);}
+
+/* Winning highlight */
+.cell.win{
+  outline: 3px solid #3b82f6; /* Tailwind "blue-500"-ish */
+  animation: pulse .9s ease-in-out 2;
+}
+
+@keyframes pulse{
+  0%{ box-shadow: 0 0 0 0 rgba(59,130,246,.5); }
+  100%{ box-shadow: 0 0 0 16px rgba(59,130,246,0); }
+}
+
+/* Status bar tweaks */
+#statusBar{
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}

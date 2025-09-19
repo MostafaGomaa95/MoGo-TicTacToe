@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoGo Tic Tac Toe</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/mystyle.css" />
+</head>
+
+<body>
+
+<section>
+  <div class="container">
+    <h1 class="text-center my-4 shadow rounded-4 text-dark-emphasis">Tic Tac Toe</h1>
+
+    <div class="d-flex flex-wrap align-items-center justify-content-evenly gap-3 mb-3">
+      <div class="d-flex align-items-center gap-2">
+        <h5 class="mb-0">Turn:</h5>
+        <i id="cPlayer" class="fa-solid fa-x fa-lg"></i>
+      </div>
+
+      <div class="d-flex align-items-center gap-4">
+        <div class="score d-flex align-items-center gap-2">
+          <span class="badge text-bg-dark">X</span>
+          <strong id="scoreX">0</strong>
+        </div>
+        <div class="score d-flex align-items-center gap-2">
+          <span class="badge text-bg-dark">O</span>
+          <strong id="scoreO">0</strong>
+        </div>
+        <div class="score d-flex align-items-center gap-2">
+          <span class="badge text-bg-secondary">Draws</span>
+          <strong id="scoreD">0</strong>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button id="btnReset" class="btn btn-outline-secondary btn-sm">Reset Board</button>
+        <button id="btnNewMatch" class="btn btn-primary btn-sm">New Match</button>
+      </div>
+    </div>
+
+    <div id="statusBar" class="alert alert-light border text-center py-2 mb-3" role="alert">
+      Good luck! X starts.
+    </div>
+
+    <div id="rowData" class="board mx-auto"></div>
+  </div>
+</section>
+
+
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
