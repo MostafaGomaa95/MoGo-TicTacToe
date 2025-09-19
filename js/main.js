@@ -67,7 +67,7 @@ function onCellClick(e){
   if(board.every(Boolean)){
     scores.d += 1;
     updateScores();
-    setStatus(`It's a draw. 🤝`);
+    setStatus(`It's a draw.`);
     return;
   }
 
