@@ -60,7 +60,7 @@ function onCellClick(e){
     markWin(winData.line);
     scores[currentPlayer] += 1;
     updateScores();
-    setStatus(`Player ${currentPlayer.toUpperCase()} wins! 🎉`);
+    setStatus(`Player ${currentPlayer.toUpperCase()} wins!`);
     return;
   }
 
